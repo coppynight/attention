@@ -7,11 +7,16 @@ The project structure follows the design outlined in `implementplan.md` and `sys
 ```
 FocusTracker/
 ├── Models/
-│   └── FocusSession.swift
+│   ├── FocusSession.swift
+│   ├── DailyFocus.swift
+│   └── FocusAlgorithm.swift
 ├── Services/
 │   ├── HealthKitManager.swift
 │   ├── MotionManager.swift
 │   └── LocalStorage.swift
+│   ├── NotificationTracker.swift
+│   ├── ScreenStateMonitor.swift
+│   └── FocusDetectionEngine.swift
 ├── Views/
 │   └── MainView.swift
 ├── Widgets/
@@ -25,3 +30,6 @@ FocusTracker/
 Open `FocusTracker.xcodeproj` in Xcode 15 or later and select the **FocusTracker**
 scheme. The project targets iOS 15 and should build with the iOS 17 SDK.
 Additional implementation is required for production use.
+
+The MVP reads HealthKit mindful minutes and device motion data to estimate daily
+focus time. Widgets refresh hourly using the same calculation.

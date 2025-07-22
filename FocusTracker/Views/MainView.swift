@@ -12,8 +12,7 @@ struct MainView: View {
         }
         .padding()
         .onAppear {
-            // Placeholder for fetching focus time
-            focusMinutes = 0
+            focusMinutes = FocusDetectionEngine.shared.todayFocusMinutes()
         }
     }
 }

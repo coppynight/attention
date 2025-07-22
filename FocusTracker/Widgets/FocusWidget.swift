@@ -12,13 +12,14 @@ struct FocusWidgetProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (FocusWidgetEntry) -> ()) {
-        let entry = FocusWidgetEntry(date: Date(), focusMinutes: 0)
+        let entry = FocusWidgetEntry(date: Date(), focusMinutes: FocusDetectionEngine.shared.todayFocusMinutes())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<FocusWidgetEntry>) -> ()) {
-        let entry = FocusWidgetEntry(date: Date(), focusMinutes: 0)
-        let timeline = Timeline(entries: [entry], policy: .atEnd)
+        let entry = FocusWidgetEntry(date: Date(), focusMinutes: FocusDetectionEngine.shared.todayFocusMinutes())
+        let next = Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
+        let timeline = Timeline(entries: [entry], policy: .after(next))
         completion(timeline)
     }
 }
