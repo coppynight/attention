@@ -33,3 +33,13 @@ Additional implementation is required for production use.
 
 The MVP reads HealthKit mindful minutes and device motion data to estimate daily
 focus time. Widgets refresh hourly using the same calculation.
+
+## Linux setup
+
+On Linux-based Codex environments you can install the Swift toolchain using the script in the repo root:
+
+```bash
+sudo ../scripts/setup_codex.sh
+```
+
+This enables basic Swift compilation but does not include Apple's iOS frameworks. Build the full app on a Mac with Xcode.
