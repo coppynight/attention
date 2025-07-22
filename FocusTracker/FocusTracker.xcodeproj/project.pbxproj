@@ -13,8 +13,6 @@ F0E9753508624DF987F55737 /* FocusSession.swift in Sources */ = {isa = PBXBuildFi
 B8D522378BAF48DF98C44B8A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADEE9B9A5F4FDE88820E2F /* HealthKitManager.swift */; };
 6C49AD90908B4CA9BC486313 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31F41C760E47A9BFCDFF58 /* LocalStorage.swift */; };
 7C0F5110ED9B494A806329AAB45011F1 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD57F8B82A6414AAA3EC6A0 /* MotionManager.swift */; };
-C9FBFE2716574427B9B8DB409744751E /* FocusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695D892EF2AF4D87BDD056D3 /* FocusWidget.swift */; };
-B1DEADBEEF1234567890CDEF /* FocusWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EC14D5FCB439FB912AC7F /* FocusWidgetBundle.swift */; };
 INFO_PLIST_BUILD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 188A4114CB3444ECA4F9F62E /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -108,8 +106,6 @@ F0E9753508624DF987F55737 /* FocusSession.swift in Sources */,
 B8D522378BAF48DF98C44B8A /* HealthKitManager.swift in Sources */,
 6C49AD90908B4CA9BC486313 /* LocalStorage.swift in Sources */,
 7C0F5110ED9B494A806329AAB45011F1 /* MotionManager.swift in Sources */,
-C9FBFE2716574427B9B8DB409744751E /* FocusWidget.swift in Sources */,
-B1DEADBEEF1234567890CDEF /* FocusWidgetBundle.swift in Sources */,
 );
 runOnlyForDeploymentPostprocessing = 0;
 };
@@ -145,7 +141,8 @@ INFOPLIST_FILE = Info.plist;
 PRODUCT_BUNDLE_IDENTIFIER = com.example.FocusTracker;
 PRODUCT_NAME = FocusTracker;
 SWIFT_VERSION = 5.9;
-IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        TARGETED_DEVICE_FAMILY = "1";
 };
 name = Debug;
 };
@@ -156,8 +153,9 @@ INFOPLIST_FILE = Info.plist;
 PRODUCT_BUNDLE_IDENTIFIER = com.example.FocusTracker;
 PRODUCT_NAME = FocusTracker;
 SWIFT_VERSION = 5.9;
-IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-SWIFT_OPTIMIZATION_LEVEL = "-O";
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        TARGETED_DEVICE_FAMILY = "1";
+        SWIFT_OPTIMIZATION_LEVEL = "-O";
 };
 name = Release;
 };
