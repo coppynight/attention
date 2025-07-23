@@ -1,0 +1,45 @@
+# FocusTracker iOS MVP
+
+This directory contains a minimal SwiftUI project skeleton for the FocusTracker app described in the project documentation. The code is designed for iOS 15.0 or later and includes placeholders for HealthKit and CoreMotion integration as well as a basic widget.
+
+The project structure follows the design outlined in `implementplan.md` and `systemdesign.md`.
+
+```
+FocusTracker/
+├── Models/
+│   ├── FocusSession.swift
+│   ├── DailyFocus.swift
+│   └── FocusAlgorithm.swift
+├── Services/
+│   ├── HealthKitManager.swift
+│   ├── MotionManager.swift
+│   └── LocalStorage.swift
+│   ├── NotificationTracker.swift
+│   ├── ScreenStateMonitor.swift
+│   └── FocusDetectionEngine.swift
+├── Views/
+│   └── MainView.swift
+├── Widgets/
+│   ├── FocusWidget.swift
+│   └── FocusWidgetBundle.swift
+└── FocusTrackerApp.swift
+```
+
+## Building
+
+Open `FocusTracker.xcodeproj` in Xcode 15 or later and select the **FocusTracker**
+scheme. The project targets iOS 15 and should build with the iOS 17 SDK.
+Additional implementation is required for production use.
+
+The MVP reads HealthKit mindful minutes and device motion data to estimate daily
+focus time. Widgets refresh hourly using the same calculation.
+
+## Linux setup
+
+On Linux-based Codex environments you can install the Swift toolchain using the script in the repo root:
+
+```bash
+sudo ../scripts/setup_codex.sh
+```
+
+This enables basic Swift compilation but does not include Apple's iOS frameworks. Build the full app on a Mac with Xcode.
